@@ -24,20 +24,23 @@ Cartploe官方的动力学模型定义部分代码如下所示，参考http://in
 转换成公式可以表示为：
 
 $$
-\left\{\begin{array}{l}
+\begin{cases}
 \ddot{x}=\frac{F+m_{p} l \dot{\theta}^{2} \sin \theta}{m_{p}+m_{c}}-\frac{m_{p} l \dot{\theta}^{2} \sin \theta}{m_{p}+m_{c}} \\
 \ddot{\theta}=\frac{g \sin \theta-\cos \theta \cdot \frac{F+m_{p} l \dot{\theta}^{2} \sin \theta}{m_{p}+m_{c}}}{l\left(\frac{4}{3}-\frac{m_{p} \cos \theta^{2}}{m_{p}+m_{c}}\right)}
-\end{array}\right.
+\end{cases}
 $$
+
+
 
 针对线性控制器，由于倒立摆的 $\theta$ 角很小，可以做近似处理，因此将 $\theta$ 趋近于0，同时 $\sin \theta$ 和 $\cos \theta$ 也做近似处理，可以得到， $\sin \theta \approx \theta$ ， $\cos \theta \approx 1$ ，经过近似处理后，公式可以表示为：
 
 $$
-\left\{\begin{array}{l}
+\begin{cases}
 \ddot{x}=\left(\frac{1}{m_{p}+m_{c}}+\frac{3 m_{p}}{m_{p}+4 m_{c}}\right) F-\frac{3 m_{p} g}{m_{p}+4 m_{c}} \theta \\
 \ddot{\theta}=\frac{3 g\left(m_{p}+m_{c}\right) \theta}{l\left(m_{p}+4 m_{c}\right)}-\frac{3 F}{l\left(m_{p}+4 m_{c}\right)}
-\end{array}\right.
+\end{cases}
 $$
+
 
 将上式整理为状态空间方程，可得：
 
@@ -245,5 +248,6 @@ def mpc_prediction(x_k, E, H, N, p):
 <img src="code/MPC_CartPole-v1.gif"/>
 
 <img src="code/MPC.png"/>
+
 
 
