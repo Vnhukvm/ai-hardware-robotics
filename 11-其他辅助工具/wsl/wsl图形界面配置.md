@@ -68,11 +68,11 @@ sudo apt install -y xfce4 xfce4-goodies
 
 # WSL 使用 xrdp 启动图形界面教程
 
-我来为您提供在WSL中使用xrdp配置图形界面的详细教程：
+我来为提供在WSL中使用xrdp配置图形界面的详细教程：
 
 ## 1. 安装图形界面环境
 
-首先，您需要选择并安装一个桌面环境。这里提供两个常用选项：
+首先，需要选择并安装一个桌面环境。这里提供两个常用选项：
 
 ### 选项A：安装 Xfce（轻量级，推荐）
 
@@ -139,7 +139,7 @@ sudo service xrdp status
 2. 输入 `mstsc` 并回车，打开远程桌面连接
 3. 在计算机名称处输入：`localhost:3389` 或 `127.0.0.1:3389`
 4. 点击连接
-5. 输入您的WSL用户名和密码
+5. 输入WSL用户名和密码
 
 ## 8. 故障排除
 
@@ -189,7 +189,7 @@ wsl -d Ubuntu sudo service xrdp start
 
 ## 10. 替代方案
 
-如果 xrdp 遇到问题，您也可以考虑：
+如果 xrdp 遇到问题，也可以考虑：
 
 - **VcXsrv** 或 **X410**：使用 X Server
 - **WSLg**：WSL2 内置的图形支持（需要 Windows 11 或 Windows 10 最新版本）

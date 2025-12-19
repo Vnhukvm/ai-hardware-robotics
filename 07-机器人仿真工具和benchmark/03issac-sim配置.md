@@ -17,7 +17,7 @@
 
 NVIDIA Isaac Sim 是一个高性能机器人仿真平台，基于NVIDIA Omniverse技术构建。它提供了真实感渲染、精确物理引擎、传感器模拟和多种机器人控制接口，是开发、测试和训练机器人算法的理想工具。
 
-本教程将指导您完成Isaac Sim的安装与基本配置，帮助您快速上手这一强大的仿真平台。（由于笔者服务器问题，图片暂时无法显示，请谅解）
+本教程将指导完成Isaac Sim的安装与基本配置，帮助快速上手这一强大的仿真平台。（由于笔者服务器问题，图片暂时无法显示，请谅解）
 
 ## 💻 系统要求
 
@@ -42,13 +42,13 @@ NVIDIA Isaac Sim 是一个高性能机器人仿真平台，基于NVIDIA Omnivers
 
 ## 🔧 安装方法
 
-Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云部署。根据您的需求选择适合的安装方式。
+Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云部署。根据需求选择适合的安装方式。
 
 ### 工作站安装
 
 1. **下载Omniverse Launcher**
    - 访问[NVIDIA Omniverse下载页面](https://www.nvidia.com/en-us/omniverse/download/)
-   - 填写表格并下载适合您操作系统的Omniverse Launcher
+   - 填写表格并下载适合操作系统的Omniverse Launcher
 
 2. **安装Omniverse Launcher**
    - 运行下载的安装程序
@@ -56,10 +56,10 @@ Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云�
 
 3. **通过Launcher安装Isaac Sim**
    - 打开Omniverse Launcher
-   - 登录您的NVIDIA账户（需要创建一个免费账户）
+   - 登录NVIDIA账户（需要创建一个免费账户）
    - 在"Exchange"选项卡中搜索"Isaac Sim"
    - 点击"安装"按钮
-   - 完成后，您可以从Launcher的"Library"选项卡启动Isaac Sim
+   - 完成后，可以从Launcher的"Library"选项卡启动Isaac Sim
 
 ### 容器安装
 
@@ -106,7 +106,7 @@ Isaac Sim支持在主要云平台上部署，包括AWS、Azure、Google Cloud等
 
 ## 🐍 Python环境配置
 
-Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Python环境与Isaac Sim交互：
+Isaac Sim包含一个内置的Python环境，但也可以配置自己的Python环境与Isaac Sim交互：
 
 1. **创建Python虚拟环境**
    ```bash
@@ -120,7 +120,7 @@ Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Pytho
    ```
 
 3. **配置Isaac Sim的Python路径**
-   - 添加Isaac Sim的Python路径到您的环境变量中
+   - 添加Isaac Sim的Python路径到环境变量中
    - 或在Python脚本中添加以下代码：
      ```python
      import sys
@@ -129,7 +129,7 @@ Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Pytho
 
 ## 🤖 ROS/ROS2集成
 
-Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS应用：
+Isaac Sim提供与ROS和ROS2的集成，使可以在仿真环境中测试ROS应用：
 
 ### ROS2集成（支持Windows和Linux）
 
@@ -164,8 +164,8 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 ### 启动Isaac Sim
 
 1. 通过Omniverse Launcher启动Isaac Sim
-2. 首次启动时，系统可能会提示您安装额外的组件
-3. 启动完成后，您将看到Isaac Sim的主界面
+2. 首次启动时，系统可能会提示安装额外的组件
+3. 启动完成后，将看到Isaac Sim的主界面
 
 ### 探索基本功能
 
@@ -199,7 +199,7 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 
 ### 1. Isaac Sim崩溃或无法启动
 
-- 确保您的GPU驱动是最新的
+- 确保GPU驱动是最新的
 - 检查系统是否满足最低硬件要求
 - 尝试重新安装Isaac Sim
 - 在启动时使用`--/log/level=debug`参数查看详细日志
@@ -247,7 +247,7 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 
 NVIDIA Isaac Sim 是一个高性能机器人仿真平台，基于NVIDIA Omniverse技术构建。它提供了真实感渲染、精确物理引擎、传感器模拟和多种机器人控制接口，是开发、测试和训练机器人算法的理想工具。
 
-本教程将指导您完成Isaac Sim的安装与基本配置，帮助您快速上手这一强大的仿真平台。（由于笔者服务器问题，图片暂时无法显示，请谅解）
+本教程将指导完成Isaac Sim的安装与基本配置，帮助快速上手这一强大的仿真平台。（由于笔者服务器问题，图片暂时无法显示，请谅解）
 
 ## 💻 系统要求
 
@@ -272,13 +272,13 @@ NVIDIA Isaac Sim 是一个高性能机器人仿真平台，基于NVIDIA Omnivers
 
 ## 🔧 安装方法
 
-Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云部署。根据您的需求选择适合的安装方式。
+Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云部署。根据需求选择适合的安装方式。
 
 ### 工作站安装
 
 1. **下载Omniverse Launcher**
    - 访问[NVIDIA Omniverse下载页面](https://www.nvidia.com/en-us/omniverse/download/)
-   - 填写表格并下载适合您操作系统的Omniverse Launcher
+   - 填写表格并下载适合操作系统的Omniverse Launcher
 
 2. **安装Omniverse Launcher**
    - 运行下载的安装程序
@@ -286,10 +286,10 @@ Isaac Sim提供多种安装方式，包括工作站安装、容器安装和云�
 
 3. **通过Launcher安装Isaac Sim**
    - 打开Omniverse Launcher
-   - 登录您的NVIDIA账户（需要创建一个免费账户）
+   - 登录NVIDIA账户（需要创建一个免费账户）
    - 在"Exchange"选项卡中搜索"Isaac Sim"
    - 点击"安装"按钮
-   - 完成后，您可以从Launcher的"Library"选项卡启动Isaac Sim
+   - 完成后，可以从Launcher的"Library"选项卡启动Isaac Sim
 
 ### 容器安装
 
@@ -336,7 +336,7 @@ Isaac Sim支持在主要云平台上部署，包括AWS、Azure、Google Cloud等
 
 ## 🐍 Python环境配置
 
-Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Python环境与Isaac Sim交互：
+Isaac Sim包含一个内置的Python环境，但也可以配置自己的Python环境与Isaac Sim交互：
 
 1. **创建Python虚拟环境**
    ```bash
@@ -350,7 +350,7 @@ Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Pytho
    ```
 
 3. **配置Isaac Sim的Python路径**
-   - 添加Isaac Sim的Python路径到您的环境变量中
+   - 添加Isaac Sim的Python路径到环境变量中
    - 或在Python脚本中添加以下代码：
      ```python
      import sys
@@ -359,7 +359,7 @@ Isaac Sim包含一个内置的Python环境，但您也可以配置自己的Pytho
 
 ## 🤖 ROS/ROS2集成
 
-Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS应用：
+Isaac Sim提供与ROS和ROS2的集成，使可以在仿真环境中测试ROS应用：
 
 ### ROS2集成（支持Windows和Linux）
 
@@ -394,8 +394,8 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 ### 启动Isaac Sim
 
 1. 通过Omniverse Launcher启动Isaac Sim
-2. 首次启动时，系统可能会提示您安装额外的组件
-3. 启动完成后，您将看到Isaac Sim的主界面
+2. 首次启动时，系统可能会提示安装额外的组件
+3. 启动完成后，将看到Isaac Sim的主界面
 
 ### 探索基本功能
 
@@ -429,7 +429,7 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 
 ### 1. Isaac Sim崩溃或无法启动
 
-- 确保您的GPU驱动是最新的
+- 确保GPU驱动是最新的
 - 检查系统是否满足最低硬件要求
 - 尝试重新安装Isaac Sim
 - 在启动时使用`--/log/level=debug`参数查看详细日志
@@ -462,4 +462,4 @@ Isaac Sim提供与ROS和ROS2的集成，使您可以在仿真环境中测试ROS�
 
 ---
 
-本指南提供了NVIDIA Isaac Sim的基本配置和入门信息。随着您对平台的深入了解，可以探索更多高级功能，如传感器仿真、机器人控制、强化学习和合成数据生成等。祝您在Isaac Sim中有一个愉快的仿真体验！
+本指南提供了NVIDIA Isaac Sim的基本配置和入门信息。随着对平台的深入了解，可以探索更多高级功能，如传感器仿真、机器人控制、强化学习和合成数据生成等。祝在Isaac Sim中有一个愉快的仿真体验！

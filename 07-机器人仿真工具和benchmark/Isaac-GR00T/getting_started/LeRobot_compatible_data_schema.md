@@ -2,7 +2,7 @@
 
 ## 概述
 
-本指南展示了如何将您的机器人数据转换为适用于我们的[LeRobot数据集V2.0格式](https://github.com/huggingface/lerobot?tab=readme-ov-file#the-lerobotdataset-format)——`GR00T LeRobot`。虽然我们添加了额外的结构，但我们的模式与上游LeRobot 2.0保持完全兼容。这些额外的元数据和结构允许对您的机器人数据进行更详细的规范和语言标注。
+本指南展示了如何将机器人数据转换为适用于我们的[LeRobot数据集V2.0格式](https://github.com/huggingface/lerobot?tab=readme-ov-file#the-lerobotdataset-format)——`GR00T LeRobot`。虽然我们添加了额外的结构，但我们的模式与上游LeRobot 2.0保持完全兼容。这些额外的元数据和结构允许对机器人数据进行更详细的规范和语言标注。
 
 ## 要求
 
@@ -74,7 +74,7 @@
 {"task_index": 1, "task": "valid"}
 ```
 
-您可以在parquet文件中引用任务索引来获取任务描述。因此在这种情况下，第一个观察的`annotation.human.action.task_description`是"pick the squash from the counter and place it in the plate"，`annotation.human.validity`是"valid"。
+可以在parquet文件中引用任务索引来获取任务描述。因此在这种情况下，第一个观察的`annotation.human.action.task_description`是"pick the squash from the counter and place it in the plate"，`annotation.human.validity`是"valid"。
 
 `tasks.json`包含整个数据集中所有任务的列表。
 
@@ -241,7 +241,7 @@
 
 ### GR00T LeRobot对标准LeRobot的扩展
 GR00T LeRobot是标准LeRobot格式的一种变体，具有更多固定要求：
-- 标准LeRobot格式使用meta/stats.json，但我们的数据加载器不需要它。如果计算太耗时，您可以安全地忽略此文件。
+- 标准LeRobot格式使用meta/stats.json，但我们的数据加载器不需要它。如果计算太耗时，可以安全地忽略此文件。
 - "observation.state"键中必须始终包含本体感受器状态。
 - 我们支持多通道注释格式（例如，粗粒度、微调），允许用户通过`annotation.<annotation_source>.<annotation_type>`键根据需要添加任意数量的注释通道。
 - 我们需要一个标准LeRobot格式中不存在的额外元数据文件`meta/modality.json`。

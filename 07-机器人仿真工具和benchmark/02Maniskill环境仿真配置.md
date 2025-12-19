@@ -133,7 +133,7 @@ python -m mani_skill.examples.demo_random_action -e "RotateSingleObjectInHandLev
 
 ![](assets/2025-03-07-16-25-23-image.png)
 
-要使用 4096 个并行任务对 PickCube-v1 任务上的 GPU 模拟进行基准测试，您可以运行
+要使用 4096 个并行任务对 PickCube-v1 任务上的 GPU 模拟进行基准测试，可以运行
 
 python -m mani_skill.examples.benchmarking.gpu_sim -e "PickCube-v1" -n 4096
 
@@ -141,16 +141,16 @@ python -m mani_skill.examples.benchmarking.gpu_sim -e "PickCube-v1" -n 4096
 
 速度非常之快
 
-要保存代理获得的视觉观察视频（在本例中只有 rgb 和深度），您可以运行
+要保存代理获得的视觉观察视频（在本例中只有 rgb 和深度），可以运行
 
 python -m mani_skill.examples.benchmarking.gpu_sim -e "PickCube-v1" -n 64 \
   --save-video --render-mode="sensors"
 
-它应该运行得相当快！（4090 上 3000+ fps，您可以增加环境数量以获得更高的 FPS）。您可以更改`--render-mode="rgb_array"`为从更高质量的相机进行渲染。
+它应该运行得相当快！（4090 上 3000+ fps，可以增加环境数量以获得更高的 FPS）。可以更改`--render-mode="rgb_array"`为从更高质量的相机进行渲染。
 
 ![](assets/2025-03-07-16-36-04-image.png)
 
-要尝试各种并行模拟功能，您可以运行
+要尝试各种并行模拟功能，可以运行
 
 python -m mani_skill.examples.benchmarking.gpu_sim -e "PickSingleYCB-v1" -n 64 \
   --save-video --render-mode="sensors"
@@ -170,7 +170,7 @@ python -m mani_skill.examples.benchmarking.gpu_sim -e "OpenCabinetDrawer-v1" -n 
 
 单击+拖动远程操作：
 
-简单的工具，可以单击并拖动 Panda 机械臂的末端执行器来解决各种任务。您只需单击并拖动，按“n”移动到您拖动到的位置，“g”切换打开/关闭抓取，然后重复。按“q”退出并保存结果视频。
+简单的工具，可以单击并拖动 Panda 机械臂的末端执行器来解决各种任务。只需单击并拖动，按“n”移动到拖动到的位置，“g”切换打开/关闭抓取，然后重复。按“q”退出并保存结果视频。
 
 python -m mani_skill.examples.teleoperation.interactive_panda -e "StackCube-v1" 
 
@@ -194,7 +194,7 @@ python -m mani_skill.examples.teleoperation.interactive_panda -e "StackCube-v1"
 
 ## 运动规划解决方案[#](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#motion-planning-solutions "此标题的永久链接")
 
-我们为熊猫手臂在某些任务上提供了运动规划解决方案/演示，您现在可以尝试并使用以下内容记录演示：
+我们为熊猫手臂在某些任务上提供了运动规划解决方案/演示，现在可以尝试并使用以下内容记录演示：
 
 ![](assets/2025-03-07-18-01-36-image.png)
 
@@ -259,7 +259,7 @@ ManiSkill3 支持通过 GPU 模拟 + 渲染 RT-1 和 Octo 等策略进行极快�
 
 ## 可视化点云[数据](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#visualize-pointcloud-data "此标题的永久链接")
 
-您可以运行以下命令来可视化点云观测结果（需要显示器才能工作）
+可以运行以下命令来可视化点云观测结果（需要显示器才能工作）
 
 ![](assets/2025-03-07-18-11-35-image.png)
 
@@ -281,7 +281,7 @@ python -m mani_skill.examples.demo_vis_pcd -e "StackCube-v1"
 
 ## 可视化分割数据[#](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#visualize-segmentation-data "此标题的永久链接")
 
-您可以运行以下命令来可视化分段数据
+可以运行以下命令来可视化分段数据
 
 python -m mani_skill.examples.demo_vis_segmentation -e "StackCube-v1"
 python -m mani_skill.examples.demo_vis_segmentation -e "StackCube-v1" \
@@ -326,7 +326,7 @@ KeyError: 'id_of_part'
 
 ## 可视化相机纹理（RGB、深度、反照率等）[#](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#visualize-camera-textures-rgb-depth-albedo-etc "此标题的永久链接")
 
-您可以运行以下命令来可视化相机生成的任意数量的纹理。请注意，默认情况下使用的着色器是“默认”着色器，它输出您可能需要的几乎所有纹理。请参阅[相机和着色器页面](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#../../)
+可以运行以下命令来可视化相机生成的任意数量的纹理。请注意，默认情况下使用的着色器是“默认”着色器，它输出可能需要的几乎所有纹理。请参阅[相机和着色器页面](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#../../)
 
 python -m mani_skill.examples.demo_vis_textures -e "StackCube-v1" -o rgb+depth
 python -m mani_skill.examples.demo_vis_textures -e "OpenCabinetDrawer-v1" -o rgb+depth+albedo+normal
@@ -337,7 +337,7 @@ python -m mani_skill.examples.demo_vis_textures -e "OpenCabinetDrawer-v1" -o rgb
 
 ## 可视化重置分布[#](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#visualize-reset-distributions "此标题的永久链接")
 
-确定强化学习和模仿学习等机器学习算法的任务难度在很大程度上取决于任务的重置分布。要查看任何任务的重置分布（重复 env.reset 调用的结果），您可以运行以下命令将视频保存到`videos`文件夹中
+确定强化学习和模仿学习等机器学习算法的任务难度在很大程度上取决于任务的重置分布。要查看任何任务的重置分布（重复 env.reset 调用的结果），可以运行以下命令将视频保存到`videos`文件夹中
 
 python -m mani_skill.examples.demo_reset_distribution -e "PegInsertionSide-v1" --record-dir="videos"
 
@@ -345,7 +345,7 @@ python -m mani_skill.examples.demo_reset_distribution -e "PegInsertionSide-v1" -
 
 ## 可视化任意机器人[#](https://maniskill.readthedocs.io/en/latest/user_guide/demos/scripts.html#visualize-any-robot "此标题的永久链接")
 
-运行以下命令打开查看器，显示空场景中给定的任意机器人（只有地板）。如果要可视化任何预定义的关键帧，您还可以指定不同的关键帧。
+运行以下命令打开查看器，显示空场景中给定的任意机器人（只有地板）。如果要可视化任何预定义的关键帧，还可以指定不同的关键帧。
 
 python -m mani_skill.examples.demo_robot -r "panda"
 

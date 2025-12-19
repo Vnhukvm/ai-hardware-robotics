@@ -5,33 +5,33 @@
 
 ## 实施动作头微调
 
-GR00T通过专用动作头设计，可以与不同类型的机器人（实施）一起工作。进行微调时，您需要根据您的数据集指定要训练的实施头：
+GR00T通过专用动作头设计，可以与不同类型的机器人（实施）一起工作。进行微调时，需要根据数据集指定要训练的实施头：
 
 1. **实施标签**
    - 在实例化`LeRobotSingleDataset`类时，每个数据集必须用特定的`EmbodimentTag`（例如EmbodimentTag.GR1_UNIFIED）标记
    - 可以在`gr00t/data/embodiment_tags.py`中找到实施标签的详尽列表
    - 此标签确定将微调哪个动作头
-   - 如果您有一个新的实施，可以使用`EmbodimentTag.NEW_EMBODIMENT`标签（例如，`new_embodiment.your_custom_dataset`）
+   - 如果有一个新的实施，可以使用`EmbodimentTag.NEW_EMBODIMENT`标签（例如，`new_embodiment.your_custom_dataset`）
 
 2. **工作原理**
-   - 当您使用特定的实施标签（例如`EmbodimentTag.GR1_UNIFIED`）加载数据集时
+   - 当使用特定的实施标签（例如`EmbodimentTag.GR1_UNIFIED`）加载数据集时
    - 模型有多个可以配置用于微调的组件（视觉编码器、语言模型、DiT等）
-   - 特别是对于动作头，只有与您指定的实施标签相对应的头会被微调。其他特定实施的动作头保持冻结状态
+   - 特别是对于动作头，只有与指定的实施标签相对应的头会被微调。其他特定实施的动作头保持冻结状态
 
 ## 高级调整参数
 
 ### 模型组件
 
-该模型有几个可以独立微调的组件。您可以在`GR00T_N1.from_pretrained`函数中配置这些参数。
+该模型有几个可以独立微调的组件。可以在`GR00T_N1.from_pretrained`函数中配置这些参数。
 
 1. **视觉编码器**（`tune_visual`）
-   - 如果您的数据具有与预训练数据在视觉上不同的特性，请设置为`true`
+   - 如果数据具有与预训练数据在视觉上不同的特性，请设置为`true`
    - 注意：这在计算上很昂贵
    - 默认值：false
 
 
 2. **语言模型**（`tune_llm`）
-   - 只有在您有与标准指令非常不同的特定领域语言时，才设置为`true`
+   - 只有在有与标准指令非常不同的特定领域语言时，才设置为`true`
    - 在大多数情况下，应该是`false`
    - 默认值：false
 
@@ -62,7 +62,7 @@ GR00T通过专用动作头设计，可以与不同类型的机器人（实施）
 状态转换处理机器人状态信息：
 
 - **StateActionToTensor**：将状态数据（如手臂位置、手部配置）转换为PyTorch张量。
-- **StateActionTransform**：对状态数据应用归一化。根据模态键，有不同的归一化模式。您可以在[state_action.py](../gr00t/data/transform/state_action.py)文件中找到转换逻辑。
+- **StateActionTransform**：对状态数据应用归一化。根据模态键，有不同的归一化模式。可以在[state_action.py](../gr00t/data/transform/state_action.py)文件中找到转换逻辑。
 
 #### 3. 动作转换
 
@@ -88,7 +88,7 @@ GR00T通过专用动作头设计，可以与不同类型的机器人（实施）
 - 它将数据填充到批次中序列的最大长度。
 - 它创建一个字典，将模态键作为键，将处理后的数据作为值。
 
-在实践中，您通常不需要对此转换进行太多修改，如果有的话。
+在实践中，通常不需要对此转换进行太多修改，如果有的话。
 
 ### Lerobot数据集兼容性
 

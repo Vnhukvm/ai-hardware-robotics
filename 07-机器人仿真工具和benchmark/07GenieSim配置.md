@@ -94,7 +94,7 @@ https://github.com/AgibotTech/genie_sim/issues/29
 
 1. 我们建议开发者使用我们统一的 Docker 容器环境。
 
-2. 如果您希望使用自己的环境，请参考我们提供的 `dockerfile` 并安装我们列出的依赖项。
+2. 如果希望使用自己的环境，请参考我们提供的 `dockerfile` 并安装我们列出的依赖项。
 
 #### [2.3.3 开发者指南](https://agibot-world.com/sim-evaluation/docs/#/?id=_233-developer-guide)
 
@@ -117,7 +117,7 @@ pre-commit run --all-files
 ### [2.4 基准测试任务](https://agibot-world.com/sim-evaluation/docs/#/v2?id=_24-benchmark-tasks)#### [2.4.1 运行基准测试](https://agibot-world.com/sim-evaluation/docs/#/v2?id=_241-run-benchmark)1. 运行 docker 容器
 
 ```Plain
-# 在主目录中启动一个新容器# 您需要将 ~/assets 更改为 GenieSimAssets 文件夹SIM_ASSETS=~/17robot/GenieSimAssets ./scripts/start_gui.sh
+# 在主目录中启动一个新容器# 需要将 ~/assets 更改为 GenieSimAssets 文件夹SIM_ASSETS=~/17robot/GenieSimAssets ./scripts/start_gui.sh
 ```
 
 2. 运行基准测试
@@ -271,7 +271,7 @@ main├── AgiBot-World│   ├── InternVL│   ├── experiments/ro
 4. 运行 docker 容器
 
 ```Plain
-# 在主目录中启动一个新容器# 您需要将 ~/assets 更改为您的本地 assets 文件夹SIM_ASSETS=~/17robo/GenieSimAssets ./scripts/start_gui.sh
+# 在主目录中启动一个新容器# 需要将 ~/assets 更改为本地 assets 文件夹SIM_ASSETS=~/17robo/GenieSimAssets ./scripts/start_gui.sh
 ```
 
 4. 运行基线模型推理
@@ -314,17 +314,17 @@ main├── AgiBot-World│   ├── InternVL│   ├── experiments/ro
 
 ![](https://icndr2yneehy.feishu.cn/space/api/box/stream/download/asynccode/?code=NzQwZmM3ZGIxOTMxMDE3MmNlZmIwODY1NGMxZDY2YjhfeGlGbVFXMXYwRzQ3RXpSclJON08yb0RsT3dkYzk3M0dfVG9rZW46VG5IU2JSWUNYb0sxZjB4eWhVeWNXSU14blBkXzE3NTE4NzYzOTQ6MTc1MTg3OTk5NF9WNA)
 
-#### [2.5.2 集成您自己的策略](https://agibot-world.com/sim-evaluation/docs/#/v2?id=_252-integrate-your-own-policy)
+#### [2.5.2 集成自己的策略](https://agibot-world.com/sim-evaluation/docs/#/v2?id=_252-integrate-your-own-policy)
 
-1. 根据以下说明构建您自己的代码
+1. 根据以下说明构建自己的代码
 
-2. a. 使用以下路径的模板开始您的模型集成。不要修改 `infer` 函数的结构。
+2. a. 使用以下路径的模板开始模型集成。不要修改 `infer` 函数的结构。
 
 ```Plain
 main├── model│   ├──demo_infer.py
 ```
 
-b. 在自定义时，请确保您的 ROS 节点严格遵守指定的话题
+b. 在自定义时，请确保 ROS 节点严格遵守指定的话题
 
 *模型推理与仿真环境之间的通信是标准化的，并基于 ROS2 实现。这些是为任务指定的专用话题。
 
@@ -353,7 +353,7 @@ main├── AgiBot-World│   ├── scripts│   │   └── infer.py�
 Bash
 
 ```Plain
-# 您需要将 ~/assets 更改为 GenieSimAssets 文件夹SIM_ASSETS=~/assets ./scripts/start_gui.sh
+# 需要将 ~/assets 更改为 GenieSimAssets 文件夹SIM_ASSETS=~/assets ./scripts/start_gui.sh
 ```
 
 3. 运行模型推理
@@ -366,7 +366,7 @@ Bash
 
 4. 模型推理依赖
 
-常用的 Python 库已在 Genie Sim Benchmark 仓库的 `requirements.txt` 文件中列出，并预装在我们的操作测试服务器的 docker 镜像中。如果您需要额外的 Python 库来运行您的策略，您可以在测试服务器上随模型文件一起上传一个包含额外库的 `requirements.txt` 文件。
+常用的 Python 库已在 Genie Sim Benchmark 仓库的 `requirements.txt` 文件中列出，并预装在我们的操作测试服务器的 docker 镜像中。如果需要额外的 Python 库来运行策略，可以在测试服务器上随模型文件一起上传一个包含额外库的 `requirements.txt` 文件。
 
 ---
 
@@ -660,7 +660,7 @@ Bash
 
 ### [3.3 如何创建一个带有具身 AI 模型的完整基准任务](https://agibot-world.com/sim-evaluation/docs/#/v2?id=_33-how-to-create-a-complete-benchmark-task-with-embodied-ai-model)
 
-1. 首先，组装您的任务模板，如 "genie_task_supermarket.json"。此配置文件包含机器人、场景、对象和阶段等。
+1. 首先，组装任务模板，如 "genie_task_supermarket.json"。此配置文件包含机器人、场景、对象和阶段等。
 
 ```Plain
 benchmark/bddl/eval_tasks/your_task.json
@@ -668,7 +668,7 @@ benchmark/bddl/eval_tasks/your_task.json
 
 请正确填写资产文件路径。程序将在用户配置的环境变量 `SIM_ASSETS` 中查找资产。
 
-2. 场景泛化：将您的任务与场景进行映射
+2. 场景泛化：将任务与场景进行映射
 
 ```Plain
 文件路径: benchmark/bddl/task_to_preselected_scenes.json
@@ -694,7 +694,7 @@ Lisp
 
 现在，基准配置步骤已完成。
 
-4. 在 "yourpolicy.py" 中访问您的具身智能模型。（请参考 demopolicy.py）
+4. 在 "yourpolicy.py" 中访问具身智能模型。（请参考 demopolicy.py）
 
 Python
 
@@ -702,7 +702,7 @@ Python
 class YourPolicy(BasePolicy):def __init__(self) -> None:super().__init__()        """初始化配置并加载模型。"""passdef reset(self):"""重置。"""passdef act(self, observations, **kwargs) -> np.ndarray:"""根据观察结果采取行动。        参数: observations 包含机器人图像 (Head_Camera_01/Right_Camera_01/Left_Camera_01) 和当前关节信息        返回: 机器人目标关节        """pass
 ```
 
-5. 最后，运行客户端并评估您自己的 AI 模型
+5. 最后，运行客户端并评估自己的 AI 模型
 
 Bash
 

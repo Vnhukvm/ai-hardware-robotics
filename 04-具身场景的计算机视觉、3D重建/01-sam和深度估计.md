@@ -23,7 +23,7 @@ SAM 的架构可以看作由三个部分组成，它们协同工作，实现了�
 
 - **图像编码器 (Image Encoder)**
   
-  - **作用**：这是 SAM 中最“重”的部分，负责“理解”整个图像。它采用了一个非常强大的**视觉 Transformer (Vision Transformer, ViT)** 模型（在您下载的模型中是 ViT-H）。
+  - **作用**：这是 SAM 中最“重”的部分，负责“理解”整个图像。它采用了一个非常强大的**视觉 Transformer (Vision Transformer, ViT)** 模型（在下载的模型中是 ViT-H）。
   
   - **过程**：当输入一张图像时，图像编码器会对其进行复杂的计算，将其转换成一个包含丰富空间和语义信息的数字表示（称为特征嵌入）。这个过程只需要对每张图片执行一次，然后结果可以被重复使用。
   
@@ -393,7 +393,7 @@ if __name__ == "__main__":
 
     # --- 配置 ---
     rgb_path = "image_d61af3.jpg" # 确保此图像文件存在
-    sam_ckpt_path = "/home/kewei/17robo/01mydemo/01ckpt/sam_vit_h_4b8939.pth" # 您的 SAM 模型路径
+    sam_ckpt_path = "/home/kewei/17robo/01mydemo/01ckpt/sam_vit_h_4b8939.pth" #  SAM 模型路径
 
     # 检查文件是否存在
     if not os.path.exists(rgb_path):

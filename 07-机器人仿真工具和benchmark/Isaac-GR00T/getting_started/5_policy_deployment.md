@@ -21,11 +21,11 @@ python scripts/inference_service.py --server \
  - 模型路径是用于策略的检查点路径，用户应提供微调后的检查点路径
  - 去噪步骤是用于策略的去噪步骤数量，我们注意到使用4个去噪步骤的效果与16个相当
  - 实施标签是用于策略的实施标签，用户在新机器人上微调时应使用new_embodiment
- - 数据配置是用于策略的数据配置。用户应使用`so100`。如果您想使用不同的机器人，请实现您自己的`ModalityConfig`和`TransformConfig`
+ - 数据配置是用于策略的数据配置。用户应使用`so100`。如果想使用不同的机器人，请实现自己的`ModalityConfig`和`TransformConfig`
 
 ### 2. 客户端节点
 
-要部署微调后的模型，您可以使用`scripts/inference_policy.py`脚本。该脚本将启动一个策略服务器。
+要部署微调后的模型，可以使用`scripts/inference_policy.py`脚本。该脚本将启动一个策略服务器。
 
 客户端节点可以使用`from gr00t.eval.service import ExternalRobotInferenceClient`类实现。该类是一个独立的客户端-服务器类，可用于与策略服务器通信，`get_action()`端点是唯一的接口。
 

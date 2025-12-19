@@ -176,7 +176,7 @@ Isaac GR00T可应用于多种行业和场景，包括：
 
 3. **与Isaac Sim集成**：
    ```python
-   # 假设您已经在Isaac Sim中设置了场景和机器人
+   # 假设已经在Isaac Sim中设置了场景和机器人
    from omni.isaac.core import World
    
    # 创建模拟世界
@@ -194,7 +194,7 @@ Isaac GR00T可应用于多种行业和场景，包括：
 
 ### 针对特定任务微调
 
-1. **准备训练数据**：收集或生成适合您特定任务的训练数据
+1. **准备训练数据**：收集或生成适合特定任务的训练数据
 
 2. **设置微调过程**：
    ```python
@@ -235,7 +235,7 @@ GR00T是一个通用的机器人基础模型，而不是针对特定任务优化
 
 ### 3. 如何获取训练GR00T的数据？
 
-NVIDIA已经发布了GR00T N1数据集作为更大的开源物理AI数据集的一部分，可以从Hugging Face和GitHub下载。此外，NVIDIA Isaac GR00T Blueprint提供了一个用于合成操作动作生成的框架，可帮助您生成自己的训练数据。
+NVIDIA已经发布了GR00T N1数据集作为更大的开源物理AI数据集的一部分，可以从Hugging Face和GitHub下载。此外，NVIDIA Isaac GR00T Blueprint提供了一个用于合成操作动作生成的框架，可帮助生成自己的训练数据。
 
 ### 4. GR00T可以与哪些机器人一起使用？
 

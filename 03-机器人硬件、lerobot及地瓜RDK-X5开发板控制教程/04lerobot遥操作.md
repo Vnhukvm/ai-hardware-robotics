@@ -13,7 +13,7 @@ git clone https://github.com/huggingface/lerobot.git
 cd lerobot
 
 # 3. 切换到包含该文件的特定分支或提交
-# 注意：这个分支名是从您提供的 URL 中提取的
+# 注意：这个分支名是从提供的 URL 中提取的
 git checkout user/michel-aractingi/2025-06-02-docs-for-hil-serl
 ```
 

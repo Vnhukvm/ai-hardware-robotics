@@ -26,7 +26,7 @@ from mani_skill.agents.registration import register_agent
 from mani_skill.utils import common, sapien_utils
 from mani_skill.utils.structs.actor import Actor
 
-# 修改这个路径为您的URDF文件实际路径
+# 修改这个路径为URDF文件实际路径
 URDF_PATH = '/home/kewei/17robo/ManiSkill/urdf_01/GEN72-EG2.urdf'
 
 # 环境第一次注册时可能会出现缺少"4C2_baselink"等链接的错误，这是因为URDF文件中的一些链接可能无法被物理引擎正确加载

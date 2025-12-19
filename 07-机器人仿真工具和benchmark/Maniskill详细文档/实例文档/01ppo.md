@@ -110,7 +110,7 @@ python -m mani_skill.trajectory.replay_trajectory \
 
 ## 引用
 
-如果您使用此基准，请引用以下内容：
+如果使用此基准，请引用以下内容：
 
 ```
 @article{DBLP:journals/corr/SchulmanWDRK17,
