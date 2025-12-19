@@ -117,7 +117,7 @@
 
 
 
-## 🚀 学习指南
+## 🚀 学习指南和学习路径
 
 飞书文档：https://datawhaler.feishu.cn/wiki/ANwTwcmK1iydqZkBrpRcia3nnlf
 
