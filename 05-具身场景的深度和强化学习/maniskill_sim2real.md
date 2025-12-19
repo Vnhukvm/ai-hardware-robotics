@@ -1,3 +1,5 @@
+本节教程比较简略，主要是执行命令即可，感兴趣的小伙伴可以做这个实验：
+
 ```
 mamba create -n py311 "python==3.11" # 3.11 is recommended
 git clone https://github.com/StoneT2000/lerobot-sim2real.git
