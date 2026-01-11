@@ -137,41 +137,45 @@ $$
 
 **(1) 导航误差 (Navigation Error, NE)**
 定义为智能体最终停止位置与目标位置之间的平均测地距离（米）。
+
 $$
-NE = \frac{1}{N} \sum_{i=1}^N \text{dist}(p_{final}^{(i)}, p_{target}^{(i)})
+NE = \frac{1}{N} \sum_{i=1}^N \mathrm{dist}(p_{final}^{(i)}, p_{target}^{(i)})
 $$
 
 **(2) 成功率 (Success Rate, SR)**
 定义为智能体停止位置与目标位置之间的测地距离小于特定阈值（标准设定为 3m）的比例。
+
 $$
-SR = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(\text{dist}(p_{final}^{(i)}, p_{target}^{(i)}) < 3m)
+SR = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(\mathrm{dist}(p_{final}^{(i)}, p_{target}^{(i)}) < 3m)
 $$
 
 **(3) 路径长度加权成功率 (Success weighted by Path Length, SPL)**
 SPL 是 VLN-CE 的核心指标，它旨在平衡“成功率”与“路径长度”。
+
 $$
 SPL = \frac{1}{N} \sum_{i=1}^N S_i \frac{l_i}{\max(l_i, p_i)}
 $$
 
 **(4) Oracle 成功率 (Oracle Success Rate, OSR)**
 智能体的轨迹中任意一点与目标的测地距离小于阈值，视为成功。OSR 衡量了智能体“经过”目标的潜力。OSR 与 SR 之间的差距通常反映了智能体停止策略 (Stop Policy) 的缺陷。
+
 $$
-OSR = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(\min_t \text{dist}(p_t^{(i)}, p_{target}^{(i)}) < 3m)
+OSR = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(\min_t \mathrm{dist}(p_t^{(i)}, p_{target}^{(i)}) < 3m)
 $$
 
 **(5) 归一化动态时间规整 (Normalized Dynamic Time Warping, nDTW)**
 nDTW 利用动态规划算法计算预测轨迹 $P$ 与参考轨迹 $Q$ 之间的最小累积距离，并进行指数归一化。
+
 $$
 nDTW = \exp\left(-\frac{DTW(P,Q)}{\sqrt{|P|\cdot|Q|}}\right)
 $$
 
 **(6) SDTW (Success weighted by normalized Dynamic Time Warping)**
 SDTW 统计成功到达终点的任务的 nDTW 指标，是衡量“指令依从性”与“任务完成度”的综合指标。
+
 $$
 SDTW = \frac{1}{N} \sum_{i=1}^N S_i \cdot \text{nDTW}_i
 $$
-
----
 
 # 连续环境视觉语言导航方法
 
