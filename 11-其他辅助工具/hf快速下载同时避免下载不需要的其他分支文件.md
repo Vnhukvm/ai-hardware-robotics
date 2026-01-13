@@ -44,7 +44,15 @@ python hf_downloader.py spatialverse/InteriorAgent main --repo-type dataset --do
 
 python hf_downloader.py spatialverse/InteriorAgent main --repo-type dataset --download_path ./interiornav_data/scene_data --download-only
 
+python hf_downloader.py nvidia/GR00T-N1.6-3B main --repo-type model --download_path ./GR00T-N1.6-3B
 
+
+
+python hf_downloader.py shashuo0104/phystwin-toy main --repo-type model --download_path ./rope
+
+python hf_downloader.py shashuo0104/phystwin-rope main --repo-type model --download_path ./sloth
+
+python hf_downloader.py shashuo0104/phystwin-T-block main --repo-type model --download_path ./T
 
 
 ```python
@@ -188,7 +196,7 @@ def main():
     parser.add_argument("--subfolder", default=None, help="Specify a subfolder to download. Only files within this folder will be downloaded.")
 
     parser.add_argument("--generate-only", action="store_true", help="Only generate the download_links.txt file and exit.")
-    parser.add_-argument("--download-only", action="store_true", help="Start download using an existing download_links.txt file.")
+    parser.add_argument("--download-only", action="store_true", help="Start download using an existing download_links.txt file.")
   
     args = parser.parse_args()
   
