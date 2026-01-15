@@ -34,7 +34,7 @@
 - 🌐 持续更新：跟踪最新技术发展和应用趋势
 - 👨‍👩‍👧‍👦 社区支持：提供交流和问题解答平台
 
-Related Open-source Projects｜相关开源项目
+**Related Open-source Projects｜相关开源项目**
 
 具身智能技术指南：[Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide)
 
